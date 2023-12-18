@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.MainController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.MainController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" style="-fx-fill: #005ca2;" width="1280.0" />
       <ImageView fitHeight="56.0" fitWidth="86.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
@@ -31,7 +31,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="NutDangNhap" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" text="Trang Chủ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="NutMain" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" text="Trang Chủ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>
@@ -59,5 +59,10 @@
          </children>
       </GridPane>
       <ChoiceBox layoutX="1201.0" layoutY="18.0" prefHeight="44.0" prefWidth="43.0" />
+      <ImageView fitHeight="640.0" fitWidth="1280.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@AnhTrangChu1.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

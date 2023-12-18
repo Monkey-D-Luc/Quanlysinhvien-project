@@ -12,9 +12,7 @@ public class SinhVien extends Application {
     @Override
     public void start(Stage SinhVien) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("SinhVien.fxml"));
-        Scene scene = new Scene(root);
-        SinhVien.setWidth(1280);
-        SinhVien.setHeight(720);
+        Scene scene = new Scene(root,1280,720);
         SinhVien.setResizable(false);
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
         SinhVien.getIcons().add(logo);

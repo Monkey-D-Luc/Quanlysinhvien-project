@@ -20,13 +20,11 @@ public class Login extends Application {
 
     @Override
     public void start(Stage DangNhap) throws Exception {
-        DangNhap.setWidth(1280);
-        DangNhap.setHeight(720);
         DangNhap.setResizable(false);
         DangNhap.setTitle("Đăng nhập");
 
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        Scene scene = new Scene(root,Color.LIGHTPINK);
+        Scene scene = new Scene(root,1280,720);
 
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
         DangNhap.getIcons().add(logo);

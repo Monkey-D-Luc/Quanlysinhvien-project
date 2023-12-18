@@ -31,7 +31,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="NutDangNhap" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" text="Trang Chủ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="NutMain" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" text="Trang Chủ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>

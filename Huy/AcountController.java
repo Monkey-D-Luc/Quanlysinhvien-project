@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
-public class MainController implements Initializable {
+public class AcountController implements Initializable {
 
     @FXML
     private Button NutMain;
@@ -25,7 +25,7 @@ public class MainController implements Initializable {
     @FXML
     private ChoiceBox<String> Menu;
 
-    private String[] item = {"Tài khoản","Thoát"};
+    private String[] item = {"Thoát"};
 
     @FXML
     public void TrangChu(ActionEvent e) throws Exception{
@@ -75,27 +75,13 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         Menu.getItems().addAll(item);
-        Menu.setOnAction(arg01 -> {
-            try {
-                Menu(arg01);
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        });
+        Menu.setOnAction(this::Menu);
     }
-    public void Menu(ActionEvent e) throws Exception{
+    public void Menu(ActionEvent e){
         String choice = Menu.getValue();
         if(choice=="Thoát"){
             Stage Main = (Stage) NutDiemThi.getScene().getWindow();
             Main.close();
-        }
-        else if(choice=="Tài khoản"){
-            Stage Main = (Stage) NutDiemThi.getScene().getWindow();
-            Main.close();
-            Stage Stage = new Stage();
-            Acount App = new Acount();
-            App.start(Stage);
         }
     }
 }

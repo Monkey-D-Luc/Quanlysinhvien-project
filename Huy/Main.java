@@ -13,6 +13,7 @@ public class Main extends Application {
     public void start(Stage Main) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root,1280,720);
+        scene.getStylesheets().add(getClass().getResource("Main.css").toExternalForm());
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
         Main.getIcons().add(logo);
         Main.setResizable(false);
@@ -20,5 +21,4 @@ public class Main extends Application {
         Main.setTitle("Trang Chủ");
         Main.show();
     }
-    
 }

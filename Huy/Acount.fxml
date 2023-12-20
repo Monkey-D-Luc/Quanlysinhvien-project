@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.MainController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.AcountController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" style="-fx-fill: #005ca2;" width="1280.0" />
       <ImageView fitHeight="44.0" fitWidth="43.0" layoutX="1201.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
@@ -65,14 +64,5 @@
          </children>
       </GridPane>
       <ChoiceBox fx:id="Menu" layoutX="1201.0" layoutY="18.0" opacity="0.0" prefHeight="44.0" prefWidth="43.0" styleClass="MenuClass" />
-      <ImageView fitHeight="640.0" fitWidth="1280.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@AnhTrangChu1.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="label" layoutX="204.0" layoutY="290.0" styleClass="outline" text="HỆ THỐNG&#10;QUẢN LÝ SINH VIÊN" textAlignment="CENTER">
-         <font>
-            <Font name="Verdana" size="85.0" />
-         </font></Label>
    </children>
 </AnchorPane>

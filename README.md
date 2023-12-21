@@ -1,6 +1,6 @@
 tải cái logo2.png và MenuImage.png, Menu.css
 
-controller thì cop hết trừ cái hàm phần mình làm.
+Các Controller chỉ cần extends MainController
 
 cái fxml thì cop cái children và thêm stylesheets="@Main.css" vào anchorpanel và xóa aciton nút trang mình làm.
 

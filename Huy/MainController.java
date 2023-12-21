@@ -13,19 +13,19 @@ import javafx.stage.Stage;
 public class MainController implements Initializable {
 
     @FXML
-    private Button NutMain;
+    protected Button NutMain;
     @FXML
-    private Button NutSV;
+    protected Button NutSV;
     @FXML
-    private Button NutDiemThi;
+    protected Button NutDiemThi;
     @FXML
-    private Button NutLichHoc;
+    protected Button NutLichHoc;
     @FXML
-    private Button NutTaiChinh;
+    protected Button NutTaiChinh;
     @FXML
-    private ChoiceBox<String> Menu;
+    protected ChoiceBox<String> Menu;
 
-    private String[] item = {"Tài khoản","Thoát"};
+    protected String[] item = {"Tài khoản","Thoát"};
 
     @FXML
     public void TrangChu(ActionEvent e) throws Exception{

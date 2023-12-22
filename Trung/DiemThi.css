@@ -1,0 +1,8 @@
+.SelectSceneChoiceBox{
+    -fx-font-size: 18px;
+}
+
+.SelectSceneChoiceBox .menu-item{
+    -fx-pref-width: 185px;
+    -fx-font-size: 18px;
+}

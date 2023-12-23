@@ -7,3 +7,5 @@ hoặc có css riêng thì cop hết bỏ cái .outline.label .text đầu tiên
 
 file java thì cop dòng này sau dòng scene 
 scene.getStylesheets().add(getClass().getResource("Main.css").toExternalForm());
+
+pass là 1 1

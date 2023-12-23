@@ -11,14 +11,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.LoginController">
    <children>
-      <PasswordField id="MatKhau" layoutX="1003.0" layoutY="494.0" prefHeight="58.0" prefWidth="232.0" />
+      <PasswordField id="MatKhau" fx:id="password" layoutX="1003.0" layoutY="494.0" prefHeight="58.0" prefWidth="232.0" />
       <Label layoutX="996.0" layoutY="239.0" style="-fx-font-weight: BOLD;" text="Đăng Nhập">
          <font>
             <Font name="Times New Roman" size="50.0" />
          </font>
       </Label>
-      <Button fx:id="NutDangNhap" layoutX="1064.0" layoutY="606.0" mnemonicParsing="false" onAction="#DangNhap" prefHeight="43.0" prefWidth="110.0" text="Đăng nhập" />
-      <TextField id="TaiKhoan" layoutX="1003.0" layoutY="360.0" prefHeight="58.0" prefWidth="232.0">
+      <Button fx:id="NutDangNhap" layoutX="1063.0" layoutY="638.0" mnemonicParsing="false" onAction="#DangNhap" prefHeight="43.0" prefWidth="110.0" text="Đăng nhập" />
+      <TextField id="TaiKhoan" fx:id="accountName" layoutX="1003.0" layoutY="360.0" prefHeight="58.0" prefWidth="232.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -43,5 +43,10 @@
          </font>
       </Label>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="ThongBao" layoutX="1019.0" layoutY="562.0" prefHeight="57.0" prefWidth="200.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

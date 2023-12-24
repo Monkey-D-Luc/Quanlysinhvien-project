@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
@@ -65,7 +66,39 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1280.0">
                <children>
                   <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#dddddd" height="553.0" layoutX="68.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="374.0" AnchorPane.leftAnchor="68.0" />
-                  <Label alignment="CENTER" layoutX="101.0" layoutY="97.0" text="Kết quả học tập" textAlignment="CENTER">
+                  <VBox layoutX="130.0" layoutY="169.0" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Mã sinh viên" textAlignment="CENTER" textFill="#2980b9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Họ tên" textAlignment="CENTER" textFill="#2980b9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Group>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="98.0" text="Kết quả học tập" textAlignment="CENTER">
                      <font>
                         <Font name="Verdana Bold" size="32.0" />
                      </font>
@@ -73,42 +106,17 @@
                    <ChoiceBox fx:id="selectSceneChoiceBox" layoutX="500.0" layoutY="20.0" prefHeight="42.0" prefWidth="185.0" styleClass="SelectSceneChoiceBox">
                        
                    </ChoiceBox>
-                  <TableView editable="true" layoutX="501.0" layoutY="81.0" prefHeight="200.0" prefWidth="739.0">
+                  <TableView editable="true" layoutX="501.0" layoutY="81.0" prefHeight="540.0" prefWidth="739.0">
                     <columns>
-                      <TableColumn prefWidth="59.0" text="STT" />
-                      <TableColumn prefWidth="187.0" text="Tên học phần" />
-                        <TableColumn prefWidth="113.66668701171875" text="Số tín chỉ" />
-                        <TableColumn prefWidth="140.66668701171875" text="Điểm thành phần" />
-                        <TableColumn prefWidth="87.33331298828125" text="Điểm thi" />
-                        <TableColumn prefWidth="149.0" text="TBCHP" />
+                      <TableColumn prefWidth="35.0" text="STT" />
+                        <TableColumn prefWidth="99.0" text="Mã học phần" />
+                      <TableColumn prefWidth="267.0" text="Tên học phần" />
+                        <TableColumn prefWidth="74.0" text="Số tín chỉ" />
+                        <TableColumn prefWidth="136.0" text="Điểm thành phần" />
+                        <TableColumn prefWidth="74.0" text="Điểm thi" />
+                        <TableColumn prefWidth="55.0" text="TBCHP" />
                     </columns>
                   </TableView>
-                  <Group layoutX="115.0" layoutY="205.0">
-                     <children>
-                        <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
-                           <font>
-                              <Font size="18.0" />
-                           </font></TextField>
-                        <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Họ tên" textAlignment="CENTER" textFill="#2980b9">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Group>
-                  <Group layoutX="114.0" layoutY="304.0">
-                     <children>
-                        <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
-                           <font>
-                              <Font size="18.0" />
-                           </font></TextField>
-                        <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Mã sinh viên" textAlignment="CENTER" textFill="#2980b9">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Group>
                   <Button layoutX="178.0" layoutY="398.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
                      <font>
                         <Font size="20.0" />

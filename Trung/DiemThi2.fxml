@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DiemThiController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DiemThi2Controller">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" style="-fx-fill: #005ca2;" width="1280.0" />
         <ImageView fitHeight="44.0" fitWidth="43.0" layoutX="1201.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +66,53 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1280.0">
                     <children>
                         <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#dddddd" height="553.0" layoutX="68.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="374.0" AnchorPane.leftAnchor="68.0" />
-                        <Label alignment="CENTER" layoutX="101.0" layoutY="97.0" text="Danh sách điểm" textAlignment="CENTER">
+                  <VBox layoutX="130.0" layoutY="167.0" prefHeight="194.0" prefWidth="250.0" spacing="40.0">
+                     <children>
+                              <Group>
+                                  <children>
+                                      <TextField fx:id="hocPhanText" prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                              </TextField>
+                                      <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Học phần" textAlignment="CENTER" textFill="#2980b9">
+                                          <font>
+                                              <Font size="20.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </Group>
+                        <Group>
+                           <children>
+                              <TextField fx:id="maHocPhanText" layoutY="-7.0" prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="21.0" layoutY="-22.0" style="-fx-background-color: #dddddd;" text="Mã học phần" textAlignment="CENTER" textFill="#2980b9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Group>
+                              <Group>
+                                  <children>
+                                      <TextField fx:id="lopText" prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                              </TextField>
+                                      <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Lớp" textAlignment="CENTER" textFill="#2980b9">
+                                          <font>
+                                              <Font size="20.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </Group>
+                     </children>
+                  </VBox>
+                        <Label alignment="CENTER" layoutX="112.0" layoutY="100.0" text="Danh sách điểm" textAlignment="CENTER">
                             <font>
                                 <Font name="Verdana Bold" size="32.0" />
                             </font>
@@ -74,55 +120,24 @@
                         <ChoiceBox fx:id="selectSceneChoiceBox" layoutX="500.0" layoutY="20.0" prefHeight="42.0" prefWidth="185.0" styleClass="SelectSceneChoiceBox">
 
                         </ChoiceBox>
-                        <TableView editable="true" layoutX="501.0" layoutY="81.0" prefHeight="200.0" prefWidth="739.0">
+                        <TableView fx:id="dsDiemTable" editable="true" layoutX="501.0" layoutY="81.0" prefHeight="540.0" prefWidth="739.0">
                             <columns>
-                                <TableColumn prefWidth="59.0" text="STT" />
-                                <TableColumn prefWidth="187.0" text="Họ và tên" />
-                                <TableColumn prefWidth="113.66668701171875" text="MSV" />
-                                <TableColumn prefWidth="140.66668701171875" text="Điểm thành phần" />
-                                <TableColumn prefWidth="87.33331298828125" text="Điểm thi" />
-                                <TableColumn prefWidth="149.0" text="TBCHP" />
+                                <TableColumn prefWidth="42.0" text="STT" />
+                                <TableColumn fx:id="hoTenColumn" prefWidth="264.0" text="Họ và tên" />
+                                <TableColumn fx:id="msvColumn" prefWidth="156.0" text="MSV" />
+                                <TableColumn fx:id="diemThanhPhanColumn" prefWidth="132.0" text="Điểm thành phần" />
+                                <TableColumn fx:id="diemThiColumn" prefWidth="78.0" text="Điểm thi" />
+                                <TableColumn prefWidth="66.0" text="TBCHP" />
                             </columns>
                         </TableView>
-                        <Group layoutX="115.0" layoutY="205.0">
-                            <children>
-                                <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font></TextField>
-                                <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Học phần" textAlignment="CENTER" textFill="#2980b9">
-                                    <font>
-                                        <Font size="20.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </Group>
-                        <Group layoutX="114.0" layoutY="304.0">
-                            <children>
-                                <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font></TextField>
-                                <Label layoutX="23.0" layoutY="-16.0" style="-fx-background-color: #dddddd;" text="Lớp" textAlignment="CENTER" textFill="#2980b9">
-                                    <font>
-                                        <Font size="20.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </Group>
-                        <Button layoutX="178.0" layoutY="398.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
+                        <Button layoutX="191.0" layoutY="468.0" mnemonicParsing="false" onAction="#FindClass" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Button>
-                        <Label layoutX="114.0" layoutY="485.0" text="TCB Học tập:">
+                        <Label fx:id="messageLabel" layoutX="191.0" layoutY="558.0" text="Thông báo lỗi" textFill="RED">
                             <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="114.0" layoutY="537.0" text="Xếp loại:">
-                            <font>
-                                <Font size="20.0" />
+                                <Font name="System Italic" size="18.0" />
                             </font>
                         </Label>
                     </children>

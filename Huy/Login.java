@@ -7,10 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-
-/**
- * JavaFX App
- */
 public class Login extends Application {
 
     public static void main(String[] args) {

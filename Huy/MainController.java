@@ -13,19 +13,19 @@ import javafx.stage.Stage;
 public class MainController implements Initializable {
 
     @FXML
-    protected Button NutMain;
+    private Button NutMain;
     @FXML
-    protected Button NutSV;
+    private Button NutSV;
     @FXML
-    protected Button NutDiemThi;
+    private Button NutDiemThi;
     @FXML
-    protected Button NutLichHoc;
+    private Button NutLichHoc;
     @FXML
-    protected Button NutTaiChinh;
+    private Button NutTaiChinh;
     @FXML
-    protected ChoiceBox<String> Menu;
+    private ChoiceBox<String> Menu;
 
-    protected String[] item = {"Tài khoản","Thoát"};
+    private String[] item = {"Tài khoản","Đăng xuất","Thoát"};
 
     @FXML
     public void TrangChu(ActionEvent e) throws Exception{
@@ -94,7 +94,14 @@ public class MainController implements Initializable {
             Stage Main = (Stage) NutDiemThi.getScene().getWindow();
             Main.close();
             Stage Stage = new Stage();
-            Acount App = new Acount();
+            Account App = new Account();
+            App.start(Stage);
+        }
+        else if(choice=="Đăng xuất"){
+            Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+            Main.close();
+            Stage Stage = new Stage();
+            Login App = new Login();
             App.start(Stage);
         }
     }

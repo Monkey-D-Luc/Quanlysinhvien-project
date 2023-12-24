@@ -7,18 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Acount extends Application {
-
+public class Account extends Application {
+   
     @Override
-    public void start(Stage Acount) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Acount.fxml"));
+    public void start(Stage Account) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Account.fxml"));
         Scene scene = new Scene(root,1280,720);
-        Acount.setResizable(false);
+        Account.setResizable(false);
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
-        Acount.getIcons().add(logo);
-        Acount.setScene(scene);
-        Acount.setTitle("Acount");
-        Acount.show();
+        Account.getIcons().add(logo);
+        Account.setScene(scene);
+        Account.setTitle("Account");
+        Account.show();
     }
-    
 }

@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+    protected static String URL = "jdbc:sqlite:/C:/Users/Administrator/OneDrive/Documents/Coding/HocJava/QuanLySinhVien/quanlysinhvien/src/main/resources/com/quanlisinhvien/Chung.db";
     @Override
     public void start(Stage Main) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));

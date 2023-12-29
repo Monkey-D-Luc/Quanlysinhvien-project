@@ -8,7 +8,7 @@ hoặc có css riêng thì cop hết bỏ cái .outline.label .text đầu tiên
 file java thì cop dòng này sau dòng scene 
 scene.getStylesheets().add(getClass().getResource("Main.css").toExternalForm());
 
-tài khoản với pass đây
+tài khoản với pass đây, ấn hẳn vào edit xem cho rõ
 
 id	accountName	password	role
 1	2155010119	123	Student

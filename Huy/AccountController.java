@@ -27,8 +27,13 @@ public class AccountController extends MainController {
     public void initialize(URL arg0, ResourceBundle arg1){
         System.out.println(LoginController.acc);
         System.out.println(LoginController.pass);
+        System.out.println(LoginController.role);
         accountName.setText(LoginController.acc);
         password.setText(LoginController.pass);
+        if(LoginController.role.equals("Student")){
+            accountName.setEditable(false);
+            System.out.println("test");
+        }
         Menu.getItems().addAll(item);
         Menu.setOnAction(arg01 -> {
             try {

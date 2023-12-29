@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class LoginController {
-    protected static String acc,pass; 
+    protected static String acc,pass,role; 
     protected static int id;
     @FXML
     private Label ThongBao;
@@ -31,6 +31,7 @@ public class LoginController {
         while (rs.next()) {
             if(acc.equals(rs.getString(2))&&pass.equals(rs.getString(3))){
                 id = rs.getInt(1);
+                role = rs.getString(4);
                 System.out.println("Dang nhap thanh cong");
                 Stage DangNhap = (Stage) NutDangNhap.getScene().getWindow();
                 DangNhap.close();
@@ -38,6 +39,7 @@ public class LoginController {
                 Main mainApp = new Main();
                 mainApp.start(mainStage);
                 cnt.close();
+                return;
             }
         }
         ThongBao.setText("Mật khẩu hoặc tài khoản\nkhông đúng!");

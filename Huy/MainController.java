@@ -13,19 +13,19 @@ import javafx.stage.Stage;
 public class MainController implements Initializable {
 
     @FXML
-    private Button NutMain;
+    protected Button NutMain;
     @FXML
-    private Button NutSV;
+    protected Button NutSV;
     @FXML
-    private Button NutDiemThi;
+    protected Button NutDiemThi;
     @FXML
-    private Button NutLichHoc;
+    protected Button NutLichHoc;
     @FXML
-    private Button NutTaiChinh;
+    protected Button NutTaiChinh;
     @FXML
-    private ChoiceBox<String> Menu;
+    protected ChoiceBox<String> Menu;
 
-    private String[] item = {"Tài khoản","Đăng xuất","Thoát"};
+    protected String[] item = {"Tài khoản","Đăng xuất","Thoát"};
 
     @FXML
     public void TrangChu(ActionEvent e) throws Exception{
@@ -47,7 +47,7 @@ public class MainController implements Initializable {
     }
     @FXML
     public void DiemThi(ActionEvent e) throws Exception{
-        System.out.println("Vao trang sinh vien");
+        System.out.println("Vao trang diem thi");
         Stage Main = (Stage) NutDiemThi.getScene().getWindow();
         Main.close();
         Stage Stage = new Stage();
@@ -56,7 +56,7 @@ public class MainController implements Initializable {
     }
     @FXML
     public void LichHoc(ActionEvent e) throws Exception{
-        System.out.println("Vao trang sinh vien");
+        System.out.println("Vao trang lich hoc");
         Stage Main = (Stage) NutDiemThi.getScene().getWindow();
         Main.close();
         Stage Stage = new Stage();
@@ -65,7 +65,7 @@ public class MainController implements Initializable {
     }
     @FXML
     public void TaiChinh(ActionEvent e) throws Exception{
-        System.out.println("Vao trang sinh vien");
+        System.out.println("Vao trang tai chinh");
         Stage Main = (Stage) NutDiemThi.getScene().getWindow();
         Main.close();
         Stage Stage = new Stage();

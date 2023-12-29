@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" stylesheets="@SinhVien.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.SinhVienController">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" style="-fx-fill: #005ca2;" width="1280.0" />
+       <ImageView fitHeight="44.0" fitWidth="43.0" layoutX="1201.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@MenuImage.png" />
+           </image>
+       </ImageView>
+       <ImageView fitHeight="56.0" fitWidth="86.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@logo2.png" />
+           </image>
+       </ImageView>
+       <GridPane layoutX="295.0" layoutY="25.0" prefHeight="30.0" prefWidth="690.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="153.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <children>
+               <Button fx:id="NutMain" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Trang chủ" textAlignment="CENTER" textFill="WHITE">
+                   <font>
+                       <Font name="Times New Roman" size="24.0" />
+                   </font>
+               </Button>
+               <Button fx:id="NutSV" mnemonicParsing="false" onAction="#SinhVien" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Sinh viên" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                   <font>
+                       <Font name="Times New Roman" size="24.0" />
+                   </font>
+               </Button>
+               <Button fx:id="NutDiemThi" mnemonicParsing="false" onAction="#DiemThi" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Điểm thi" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                   <font>
+                       <Font name="Times New Roman" size="24.0" />
+                   </font>
+               </Button>
+               <Button fx:id="NutLichHoc" mnemonicParsing="false" onAction="#LichHoc" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Lịch học" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+                   <font>
+                       <Font name="Times New Roman" size="24.0" />
+                   </font>
+               </Button>
+               <Button fx:id="NutTaiChinh" mnemonicParsing="false" onAction="#TaiChinh" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Tài chính" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+                   <font>
+                       <Font name="Times New Roman" size="24.0" />
+                   </font>
+               </Button>
+           </children>
+       </GridPane>
+       <ChoiceBox fx:id="Menu" layoutX="1201.0" layoutY="18.0" opacity="0.0" prefHeight="44.0" prefWidth="43.0" styleClass="MenuClass" />
+
+
+      <TableView fx:id="table" layoutX="448.0" layoutY="80.0" prefHeight="640.0" prefWidth="830.0">
+        <columns>
+          <TableColumn prefWidth="81.59994506835938" text="STT" />
+          <TableColumn fx:id="msvColumn" prefWidth="128.2666015625" text="MSV" />
+            <TableColumn fx:id="tenColumn" prefWidth="149.0667724609375" text="Họ tên" />
+            <TableColumn fx:id="lopColumn" prefWidth="88.79986572265625" text="Lớp" />
+            <TableColumn fx:id="khoaHocColumn" prefWidth="148.0" text="Khóa" />
+            <TableColumn fx:id="khoaColumn" prefWidth="126.13330078125" text="Khoa" />
+        </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="96.0" styleClass="rec" AnchorPane.bottomAnchor="33.59999999999991" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="854.0" AnchorPane.topAnchor="96.0">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Label>
+      <ChoiceBox fx:id="khoaChoiceBox" layoutX="66.0" layoutY="220.0" prefHeight="42.0" prefWidth="293.0">
+         <styleClass>
+            <String fx:value="b" />
+            <String fx:value="ChoiceBox" />
+         </styleClass></ChoiceBox>
+      <ChoiceBox fx:id="khoaHocChoiceBox" layoutX="67.0" layoutY="298.0" prefHeight="42.0" prefWidth="293.0">
+         <styleClass>
+            <String fx:value="b" />
+            <String fx:value="ChoiceBox" />
+         </styleClass></ChoiceBox>
+      <ChoiceBox fx:id="lopChoiceBox" layoutX="66.0" layoutY="379.0" prefHeight="42.0" prefWidth="293.0">
+         <styleClass>
+            <String fx:value="b" />
+            <String fx:value="ChoiceBox" />
+         </styleClass></ChoiceBox>
+      <Button fx:id="hienThiButton" layoutX="143.0" layoutY="484.0" mnemonicParsing="false" onAction="#HienThiTT" prefHeight="42.0" prefWidth="139.0" text="Hiển thị">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="84.0" layoutY="209.0" prefHeight="32.0" prefWidth="61.0" styleClass="a" text=" Khoa ">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="84.0" layoutY="287.0" prefHeight="32.0" prefWidth="61.0" styleClass="a" text=" Khóa ">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="84.0" layoutY="360.0" prefHeight="32.0" prefWidth="61.0" styleClass="a" text="Lớp">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="155.0" text="DANH SÁCH">
+         <font>
+            <Font name="Times New Roman Bold" size="26.0" />
+         </font>
+      </Label>
+      
+   </children>
+</AnchorPane>

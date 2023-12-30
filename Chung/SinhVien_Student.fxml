@@ -122,12 +122,12 @@
             <Font name="Times New Roman" size="24.0" />
          </font>
       </Label>
-      <CheckBox layoutX="885.0" layoutY="207.0" mnemonicParsing="false" text="Nam">
+      <CheckBox fx:id="Nam" layoutX="885.0" layoutY="207.0" mnemonicParsing="false" text="Nam">
          <font>
             <Font name="Times New Roman" size="24.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="1056.0" layoutY="207.0" mnemonicParsing="false" text="Nữ">
+      <CheckBox fx:id="Nu" layoutX="1056.0" layoutY="207.0" mnemonicParsing="false" text="Nữ">
          <font>
             <Font name="Times New Roman" size="24.0" />
          </font>

@@ -5,9 +5,14 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class SinhVien_StudentController extends MainController {
+    @FXML 
+    private CheckBox Nam;
+    @FXML 
+    private CheckBox Nu;
     @FXML 
     private TextField MSV;
     @FXML 
@@ -37,6 +42,26 @@ public class SinhVien_StudentController extends MainController {
     public void ChangeInfo() throws Exception{
         Class.forName("org.sqlite.JDBC");
         Connection cnt = DriverManager.getConnection(Main.URL);
-        Statement stt = cnt.createStatement();        
+        String updateQuery = "UPDATE Sinh_Vien SET ten=?, ngay_sinh=?, cmnd=?, khoa=?, khoa_hoc=?, lop=? WHERE msv=?";
+
+        try (PreparedStatement preparedStatement = cnt.prepareStatement(updateQuery)) {
+            preparedStatement.setString(1, Name.getText());
+            preparedStatement.setString(2, Ngay_Sinh.getText());
+            preparedStatement.setString(3, CMND.getText());
+            preparedStatement.setString(4, Chuyen_Nganh.getText());
+            preparedStatement.setString(5, Khoa_Hoc.getText());
+            preparedStatement.setString(6, Lop.getText());
+            preparedStatement.setString(7, MSV.getText());
+
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data updated successfully!");
+            } else {
+                System.out.println("Failed to update data. The specified MSV may not exist.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

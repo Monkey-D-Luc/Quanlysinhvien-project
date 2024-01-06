@@ -17,7 +17,7 @@ public class Account extends Application {
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
         Account.getIcons().add(logo);
         Account.setScene(scene);
-        Account.setTitle("Account");
+        Account.setTitle("Thông tin tài khoản");
         Account.show();
     }
 }

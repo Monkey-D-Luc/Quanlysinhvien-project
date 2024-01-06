@@ -17,15 +17,11 @@ public class Login extends Application {
     public void start(Stage DangNhap) throws Exception {
         DangNhap.setResizable(false);
         DangNhap.setTitle("Đăng nhập");
-
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root,1280,720);
-
         Image logo = new Image(getClass().getResourceAsStream("logo.png"));
         DangNhap.getIcons().add(logo);
- 
         DangNhap.setScene(scene);
         DangNhap.show();
     }
-
 }

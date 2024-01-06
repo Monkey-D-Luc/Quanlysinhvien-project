@@ -57,7 +57,7 @@ public class MainController implements Initializable {
     @FXML
     public void LichHoc(ActionEvent e) throws Exception{
         System.out.println("Vao trang lich hoc");
-        Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+        Stage Main = (Stage) NutLichHoc.getScene().getWindow();
         Main.close();
         Stage Stage = new Stage();
         LichHoc App = new LichHoc();
@@ -66,7 +66,7 @@ public class MainController implements Initializable {
     @FXML
     public void TaiChinh(ActionEvent e) throws Exception{
         System.out.println("Vao trang tai chinh");
-        Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+        Stage Main = (Stage) NutTaiChinh.getScene().getWindow();
         Main.close();
         Stage Stage = new Stage();
         TaiChinh App = new TaiChinh();
@@ -75,11 +75,11 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         Menu.getItems().addAll(item);
+        // chạy hàm Menu() khi ấn vào 1 item trong Menu
         Menu.setOnAction(arg01 -> {
             try {
                 Menu(arg01);
             } catch (Exception e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         });
@@ -87,18 +87,18 @@ public class MainController implements Initializable {
     public void Menu(ActionEvent e) throws Exception{
         String choice = Menu.getValue();
         if(choice=="Thoát"){
-            Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+            Stage Main = (Stage) NutMain.getScene().getWindow();
             Main.close();
         }
         else if(choice=="Tài khoản"){
-            Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+            Stage Main = (Stage) NutMain.getScene().getWindow();
             Main.close();
             Stage Stage = new Stage();
             Account App = new Account();
             App.start(Stage);
         }
         else if(choice=="Đăng xuất"){
-            Stage Main = (Stage) NutDiemThi.getScene().getWindow();
+            Stage Main = (Stage) NutMain.getScene().getWindow();
             Main.close();
             Stage Stage = new Stage();
             Login App = new Login();

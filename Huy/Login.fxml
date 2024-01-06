@@ -11,7 +11,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanlisinhvien.LoginController">
    <children>
-      <PasswordField id="MatKhau" fx:id="password" layoutX="1003.0" layoutY="494.0" prefHeight="58.0" prefWidth="232.0" />
+      <PasswordField id="MatKhau" fx:id="password" layoutX="1003.0" layoutY="494.0" prefHeight="58.0" prefWidth="232.0">
+         <font>
+            <Font size="18.0" />
+         </font></PasswordField>
+      <TextField id="TaiKhoan" fx:id="ShowPassField" disable="true" layoutX="1003.0" layoutY="494.0" opacity="0.0" prefHeight="58.0" prefWidth="232.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
       <Label layoutX="996.0" layoutY="239.0" style="-fx-font-weight: BOLD;" text="Đăng Nhập">
          <font>
             <Font name="Times New Roman" size="50.0" />
@@ -48,5 +56,16 @@
             <Font name="Times New Roman" size="20.0" />
          </font>
       </Label>
+      <ImageView fx:id="ShowPassImage" fitHeight="35.0" fitWidth="32.0" layoutX="1240.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ShowPass.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HidePassImage" fitHeight="35.0" fitWidth="32.0" layoutX="1240.0" layoutY="506.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@HidePass.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ShowAndHidePassButton" layoutX="1240.0" layoutY="506.0" mnemonicParsing="false" onAction="#ShowAndHidePass" opacity="0.0" prefHeight="35.0" prefWidth="32.0" text="Button" />
    </children>
 </AnchorPane>

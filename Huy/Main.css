@@ -1,24 +1,25 @@
 .outline.label .text{
     -fx-fill: #005ca2; fill: #005ca2;
-    -fx-stroke: #000000; stroke: #000000;
+    -fx-stroke: #ffffff; stroke: #ffffff;
     -fx-stroke-width: 3px; stroke-width: 3px;
     -fx-stroke-type: outside;
 }
 .MenuClass .text{
-    -fx-text-fill: black;
     -fx-font-size: 24px; font-size: 24px;
-    -fx-alignment: CENTER-LEFT;
     -fx-alignment: CENTER-LEFT;
     -fx-padding: 5 10; padding: 5 10;
 }
-.MenuClass .context-menu { -fx-background-color: #005ca2; -fx-border-color: white; -fx-translate-x: -96px;background-color: #005ca2;border-color: white;}
-
-.MenuClass .menu-item:focused { -fx-background-color: rgb(255, 255, 255);background-color: rgb(255, 255, 255); }
+.MenuClass .context-menu { -fx-background-color: #005ca2; -fx-border-color: white; -fx-translate-x: -96px; background-color: #005ca2;border-color: white;}
 
 .MenuClass .menu-item > .label { -fx-text-fill: rgb(255, 255, 255); }
+
+.MenuClass .menu-item:focused { -fx-background-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255); }
 
 .MenuClass .menu-item:focused > .label { -fx-text-fill: rgb(0, 0, 0); }
 
 .UnderLine:hover{
     -fx-underline: true;
+}
+.dialog-pane {
+    -fx-font-size: 18px; font-size: 18px;
 }

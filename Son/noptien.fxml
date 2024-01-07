@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.NoptienController">
+   <children>
+      <TextField fx:id="my_masv" layoutX="59.0" layoutY="167.0" prefHeight="26.0" prefWidth="190.0" />
+      <Label layoutX="59.0" layoutY="135.0" prefHeight="20.0" prefWidth="128.0" text="Nhập mã sinh viên:">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="312.0" layoutY="136.0" prefHeight="18.0" prefWidth="113.0" text="Nhập số tiền nộp:">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="my_noptien" layoutX="313.0" layoutY="167.0" prefHeight="26.0" prefWidth="190.0" />
+      <Button layoutX="223.0" layoutY="264.0" mnemonicParsing="false" onAction="#NopTien" prefHeight="58.0" prefWidth="128.0" text="CẬP NHẬT" textAlignment="CENTER" />
+      <Label fx:id="Error" layoutX="195.0" layoutY="214.0" prefHeight="18.0" prefWidth="198.0" textFill="RED">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#005ca2" height="100.0" stroke="BLACK" strokeType="INSIDE" width="589.0" />
+      <Label layoutX="107.0" layoutY="21.0" prefHeight="58.0" prefWidth="376.0" text="NỘP TIỀN HỌC" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

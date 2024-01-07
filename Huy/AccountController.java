@@ -36,6 +36,9 @@ public class AccountController extends MainController {
     public void initialize(URL arg0, ResourceBundle arg1){
         try {
             accountNameField.setText(LoginController.acc);
+            if(LoginController.role.equals("Student")){
+                accountNameField.setDisable(true);
+            }
         } catch (Exception e) {}
         try {
             accountName.setText(LoginController.acc);
@@ -111,8 +114,7 @@ public class AccountController extends MainController {
     public void ShowAndHideOldPass(ActionEvent e) throws Exception{
         if(OldPassInfo.equals("hide")){
             ShowOldPassField.setDisable(false);
-            oldPassword = HideOldPassField.getText();
-            ShowOldPassField.setText(oldPassword);
+            ShowOldPassField.setText(HideOldPassField.getText());
             ShowOldPassField.setOpacity(1);
             ShowOldPassImage.setOpacity(0);
             HideOldPassImage.setOpacity(1);
@@ -120,8 +122,7 @@ public class AccountController extends MainController {
         }
         else if (OldPassInfo.equals("show")){
             ShowOldPassField.setDisable(true);
-            oldPassword = ShowOldPassField.getText();
-            HideOldPassField.setText(oldPassword);
+            HideOldPassField.setText(ShowOldPassField.getText());
             ShowOldPassField.setOpacity(0);
             HideOldPassImage.setOpacity(0);
             ShowOldPassImage.setOpacity(1);
@@ -131,8 +132,7 @@ public class AccountController extends MainController {
     public void ShowAndHideNewPass(ActionEvent e) throws Exception{
         if(NewPassInfo.equals("hide")){
             ShowNewPassField.setDisable(false);
-            newPassword = HideNewPassField.getText();
-            ShowNewPassField.setText(newPassword);
+            ShowNewPassField.setText(HideNewPassField.getText());
             ShowNewPassField.setOpacity(1);
             ShowNewPassImage.setOpacity(0);
             HideNewPassImage.setOpacity(1);
@@ -140,8 +140,7 @@ public class AccountController extends MainController {
         }
         else if (NewPassInfo.equals("show")){
             ShowNewPassField.setDisable(true);
-            newPassword = ShowNewPassField.getText();
-            HideNewPassField.setText(newPassword);
+            HideNewPassField.setText(ShowNewPassField.getText());
             ShowNewPassField.setOpacity(0);
             HideNewPassImage.setOpacity(0);
             ShowNewPassImage.setOpacity(1);

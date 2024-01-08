@@ -10,12 +10,6 @@ scene.getStylesheets().add(getClass().getResource("Main.css").toExternalForm());
 
 tài khoản với pass đây, ấn hẳn vào edit xem cho rõ
 
-id	accountName	password	role
-1	2155010119	123	Student
-2	J1ckay	321	Admin
-3	2155010269	1	Student
-4	2155010270	2	Student
-5	2155010271	3	Student
-6	2155010245	4	Student
-7	2155010289	5	Student
-8	2155010298	6	Student
+1 1 tài khoản admin
+
+2155010119 123 tài khoản student

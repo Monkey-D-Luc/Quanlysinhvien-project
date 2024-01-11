@@ -37,7 +37,7 @@ public class AccountController extends MainController {
         try {
             accountNameField.setText(LoginController.acc);
             if(LoginController.role.equals("Student")){
-                accountNameField.setDisable(true);
+                accountNameField.setEditable(false);;
             }
         } catch (Exception e) {}
         try {
@@ -74,6 +74,8 @@ public class AccountController extends MainController {
             newAccountName = accountNameField.getText();
             String sql = "UPDATE Account SET accountName = "+newAccountName+", password = "+newPassword+" WHERE id = "+LoginController.id+";";
             stt.executeUpdate(sql);
+            LoginController.acc = newAccountName;
+            LoginController.pass = newPassword;
             ThongBao("Tài khoản và mật khẩu đã được cập nhập");
         } else ThongBao.setText("Mật khẩu cũ không đúng!");
     }

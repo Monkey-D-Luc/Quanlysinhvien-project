@@ -122,12 +122,12 @@
                         </ChoiceBox>
                         <TableView fx:id="dsDiemTable" editable="true" layoutX="501.0" layoutY="81.0" prefHeight="540.0" prefWidth="739.0">
                             <columns>
-                                <TableColumn prefWidth="42.0" text="STT" />
+                                <TableColumn fx:id="sttColumn" prefWidth="42.0" sortable="false" text="STT" />
                                 <TableColumn fx:id="hoTenColumn" prefWidth="264.0" text="Họ và tên" />
                                 <TableColumn fx:id="msvColumn" prefWidth="156.0" text="MSV" />
                                 <TableColumn fx:id="diemThanhPhanColumn" prefWidth="132.0" text="Điểm thành phần" />
                                 <TableColumn fx:id="diemThiColumn" prefWidth="78.0" text="Điểm thi" />
-                                <TableColumn prefWidth="66.0" text="TBCHP" />
+                                <TableColumn fx:id="tbchpColumn" prefWidth="66.0" text="TBCHP" />
                             </columns>
                         </TableView>
                         <Button layoutX="191.0" layoutY="468.0" mnemonicParsing="false" onAction="#FindClass" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
@@ -135,11 +135,16 @@
                                 <Font size="20.0" />
                             </font>
                         </Button>
-                        <Label fx:id="messageLabel" layoutX="191.0" layoutY="558.0" text="Thông báo lỗi" textFill="RED">
+                        <Label fx:id="messageLabel" layoutX="138.0" layoutY="557.0" text="Thông báo lỗi" textFill="RED">
                             <font>
                                 <Font name="System Italic" size="18.0" />
                             </font>
                         </Label>
+                  <Label layoutX="739.0" layoutY="15.0" text="Nhấn đúp vào &quot;Điểm thành phần&quot; và &quot;Điểm thi&quot; để chỉnh sửa&#10;Nhấn &quot;Enter&quot; để lưu" textFill="#007cff">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Label>
                     </children>
                 </AnchorPane>
             </content>

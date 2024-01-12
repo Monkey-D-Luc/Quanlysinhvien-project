@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
@@ -70,7 +71,7 @@
                      <children>
                         <Group>
                            <children>
-                              <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                              <TextField fx:id="msvText" prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -84,7 +85,7 @@
                         </Group>
                         <Group>
                            <children>
-                              <TextField prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
+                              <TextField fx:id="hoTenText" prefHeight="45.0" prefWidth="250.0" style="-fx-border-color: #0984e3; -fx-background-color: #dddddd;">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -106,30 +107,37 @@
                    <ChoiceBox fx:id="selectSceneChoiceBox" layoutX="500.0" layoutY="20.0" prefHeight="42.0" prefWidth="185.0" styleClass="SelectSceneChoiceBox">
                        
                    </ChoiceBox>
-                  <TableView editable="true" layoutX="501.0" layoutY="81.0" prefHeight="540.0" prefWidth="739.0">
+                  <TableView fx:id="ketQuaHocTapTable" editable="true" layoutX="501.0" layoutY="81.0" prefHeight="540.0" prefWidth="739.0">
                     <columns>
-                      <TableColumn prefWidth="35.0" text="STT" />
-                        <TableColumn prefWidth="99.0" text="Mã học phần" />
-                      <TableColumn prefWidth="267.0" text="Tên học phần" />
-                        <TableColumn prefWidth="74.0" text="Số tín chỉ" />
-                        <TableColumn prefWidth="136.0" text="Điểm thành phần" />
-                        <TableColumn prefWidth="74.0" text="Điểm thi" />
-                        <TableColumn prefWidth="55.0" text="TBCHP" />
+                      <TableColumn fx:id="sttColumn" prefWidth="35.0" text="STT" />
+                        <TableColumn fx:id="maHocPhanColumn" text="Mã&#10;học phần" />
+                      <TableColumn fx:id="tenHocPhanColumn" prefWidth="252.0" text="Tên học phần" />
+                        <TableColumn fx:id="soTinChiColumn" minWidth="0.0" prefWidth="42.0" text="Số &#10;tín &#10;chỉ" />
+                        <TableColumn fx:id="diemThanhPhanColumn" prefWidth="63.0" text="Điểm &#10;thành &#10;phần" />
+                        <TableColumn fx:id="diemThiColumn" prefWidth="68.0" text="Điểm thi" />
+                        <TableColumn fx:id="tbchpColumn" prefWidth="56.0" text="TBCHP" />
+                        <TableColumn fx:id="diemSoColumn" minWidth="0.0" prefWidth="66.0" text="Điểm số" />
+                        <TableColumn fx:id="diemChuColumn" prefWidth="76.0" text="Điểm chữ" />
                     </columns>
                   </TableView>
-                  <Button layoutX="178.0" layoutY="398.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
+                  <Button layoutX="178.0" layoutY="398.0" mnemonicParsing="false" onAction="#FindStudent" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #74b9ff; -fx-border-color: #0984e3;" text="Tìm kiếm">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Label layoutX="114.0" layoutY="485.0" text="TCB Học tập:">
+                  <Label fx:id="tbcHocTapLabel" layoutX="114.0" layoutY="485.0" text="TCB Học tập:">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="114.0" layoutY="537.0" text="Xếp loại:">
+                  <Label layoutX="114.0" layoutY="537.0" text="Xếp loại:" fx:id="xepLoaiLabel">
                      <font>
                         <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="messageLabel" layoutX="150.0" layoutY="355.0" text="Thông báo" textFill="RED">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
                </children>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LichHocController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" style="-fx-fill: #005ca2;" width="1280.0" />
+      <ImageView fitHeight="44.0" fitWidth="43.0" layoutX="1201.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MenuImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="86.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo2.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="295.0" layoutY="25.0" prefHeight="30.0" prefWidth="690.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="153.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="NutMain" mnemonicParsing="false" onAction="#TrangChu" prefHeight="44.0" prefWidth="172.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Trang chủ" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="NutSV" mnemonicParsing="false" onAction="#SinhVien" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Sinh viên" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="NutDiemThi" mnemonicParsing="false" onAction="#DiemThi" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Điểm thi" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="NutLichHoc" mnemonicParsing="false" onAction="#LichHoc" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Lịch học" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="NutTaiChinh" mnemonicParsing="false" onAction="#TaiChinh" prefHeight="44.0" prefWidth="173.0" style="-fx-fill: #005ca2;-fx-background-color: #005ca2;" styleClass="UnderLine" text="Tài chính" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <ChoiceBox fx:id="Menu" layoutX="1201.0" layoutY="18.0" opacity="0.0" prefHeight="44.0" prefWidth="43.0" styleClass="MenuClass" />
+      <TableView fx:id="hienthilich" editable="true" layoutX="300.0" layoutY="80.0" prefHeight="640.0" prefWidth="982.0">
+        <columns>
+          <TableColumn fx:id="ten_hoc_phan" prefWidth="196.0" text="Tên học phần " />
+            <TableColumn fx:id="so_tin_chi" prefWidth="59.0" style="-fx-alignment: CENTER;" text=" Số T/Chỉ " />
+            <TableColumn fx:id="ten_lop_tin_chi" prefWidth="88.0" text="Tên lớp T/Chỉ" />
+            <TableColumn fx:id="thoi_gian" prefWidth="163.0" style="-fx-alignment: CENTER;" text="Thời gian" />
+            <TableColumn fx:id="thu" prefWidth="30.0" style="-fx-alignment: CENTER;" text="Thứ" />
+            <TableColumn fx:id="tiet" prefWidth="39.0" style="-fx-alignment: CENTER;" text="Tiết" />
+            <TableColumn fx:id="phong" prefWidth="66.0" style="-fx-alignment: CENTER;" text="Phòng" />
+            <TableColumn fx:id="thanh_vien" minWidth="6.0" prefWidth="117.0" text="Thành viên" />
+            <TableColumn fx:id="ma_sinh_vien" minWidth="0.0" prefWidth="77.0" text="Mã sinh viên" />
+            <TableColumn fx:id="giao_vien" maxWidth="508.0" minWidth="-1.0" prefWidth="146.0" text="Giáo viên" />
+        </columns>
+      </TableView>
+      <Label layoutY="80.0" prefHeight="640.0" prefWidth="300.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 5;" />
+      <Label layoutX="20.0" layoutY="95.0" text="Tra cứu: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="136.0" text="Tên học phần: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="221.0" text="Số tín chỉ: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="271.0" text="Tên lớp tín chỉ:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="463.0" text="Thành viên: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="thanhtracuu" layoutX="115.0" layoutY="92.0" prefHeight="34.0" prefWidth="158.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <TextField fx:id="ten_hoc_phan_text" layoutX="21.0" layoutY="170.0" prefHeight="34.0" prefWidth="257.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <TextField fx:id="so_tin_chi_text" layoutX="132.0" layoutY="218.0" prefHeight="34.0" prefWidth="148.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <TextField fx:id="ten_lop_tin_chi_text" layoutX="178.0" layoutY="268.0" prefHeight="34.0" prefWidth="101.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <TextField fx:id="thanh_vien_text" layoutX="21.0" layoutY="498.0" prefHeight="34.0" prefWidth="257.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Label layoutX="21.0" layoutY="551.0" text="Mã sinh viên: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ma_sinh_vien_text" layoutX="161.0" layoutY="548.0" prefHeight="34.0" prefWidth="115.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Label layoutX="21.0" layoutY="590.0" text="Giáo viên:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="giao_vien_text" layoutX="21.0" layoutY="626.0" prefHeight="34.0" prefWidth="257.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Button fx:id="nutthem" layoutX="41.0" layoutY="673.0" mnemonicParsing="false" onAction="#ThemLichhoc" prefHeight="25.0" prefWidth="69.0" text="Thêm " />
+      <Button fx:id="nutxoa" layoutX="193.0" layoutY="673.0" mnemonicParsing="false" onAction="#XoaLichhoc" prefHeight="25.0" prefWidth="69.0" text="Xóa" />
+      <Label layoutX="20.0" layoutY="369.0" text="Thứ:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="thu_text" layoutX="77.0" layoutY="366.0" prefHeight="34.0" prefWidth="69.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Label layoutX="21.0" layoutY="318.0" text="Thời gian: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="thoi_gian_text" layoutX="132.0" layoutY="315.0" prefHeight="34.0" prefWidth="148.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Label layoutX="152.0" layoutY="369.0" text="Tiết: ">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tiet_text" layoutX="210.0" layoutY="366.0" prefHeight="34.0" prefWidth="69.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+      <Label layoutX="21.0" layoutY="419.0" text="Phòng:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phong_text" layoutX="105.0" layoutY="416.0" prefHeight="34.0" prefWidth="173.0" style="-fx-border-color: #4CB9E7; -fx-border-width: 3; -fx-border-style: hidden hidden solid hidden;" />
+   </children>
+</AnchorPane>

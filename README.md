@@ -1,4 +1,5 @@
--Giao diện đăng nhập của hệ thống: (hình 1.1) Người dùng nhập tên tài khoản và mật khẩu, sau đó ấn nút đăng nhập nếu tài khoản hợp lệ thì người dùng truy cập vào hệ thống.
+Đây là Project nhỏ làm phục vụ bộ môn Java. Phần mềm giúp quản lý thông tin cá nhân của sinh viên. 
+-Giao diện đăng nhập của hệ thống: (hình 1.1) Người dùng nhập tên tài khoản và mật khẩu, sau đó ấn nút đăng nhập nếu tài khoản hợp lệ thì người dùng truy cập vào hệ thống.Có 2 cấp độ chức năng của tài khoản là admin và sinh viên. Chỉ có admin là được thao tác lên thông tin của sinh viên. Tài khoản của sinh viên chỉ có quyền xem.
 
 ![dangnhap](https://github.com/Monkey-D-Luc/Quanlysinhvien/assets/133494882/8d33f80e-19b9-4914-bc57-38a33399454c)
 
